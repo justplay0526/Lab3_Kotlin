@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Lab2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/ed_InputTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="請輸入玩家姓名"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tv_Hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="請輸入玩家姓名以開始遊戲"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/ed_InputTextName"
+        app:layout_constraintTop_toBottomOf="@+id/ed_InputTextName" />
+
+    <RadioGroup
+        android:id="@+id/RGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/tv_Hint"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Hint">
+
+        <RadioButton
+            android:id="@+id/btn_scissors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="剪刀"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/btn_rock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="石頭"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/btn_paper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="布"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_RPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Click_RPS"
+        android:text="猜拳"
+        app:layout_constraintStart_toStartOf="@+id/RGroup"
+        app:layout_constraintTop_toBottomOf="@+id/RGroup" />
+
+    <TextView
+        android:id="@+id/tv_NameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="名字"
+        app:layout_constraintStart_toStartOf="@+id/btn_RPS"
+        app:layout_constraintTop_toBottomOf="@+id/btn_RPS" />
+
+
+    <TextView
+        android:id="@+id/tv_Winner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="勝利者"
+        app:layout_constraintStart_toEndOf="@+id/tv_NameView"
+        app:layout_constraintTop_toTopOf="@+id/tv_NameView" />
+
+    <TextView
+        android:id="@+id/tv_Myturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="我方出拳"
+        app:layout_constraintStart_toEndOf="@+id/tv_Winner"
+        app:layout_constraintTop_toTopOf="@+id/tv_Winner" />
+
+    <TextView
+        android:id="@+id/tv_COMturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="電腦出拳"
+        app:layout_constraintStart_toEndOf="@+id/tv_Myturn"
+        app:layout_constraintTop_toTopOf="@+id/tv_Myturn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
